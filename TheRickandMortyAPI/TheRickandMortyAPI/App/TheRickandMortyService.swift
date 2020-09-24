@@ -9,8 +9,7 @@
 import Foundation
 
 protocol TheRickandMortyServiceProtocol {
-    func getEpisodes(completion: @escaping (Result<EpisodesResponse, Error>) -> Void)
-    func getCharaters(completion: @escaping (Result<Any, Error>) -> Void)
+    func getCharaters(completion: @escaping (Result<CharactersResponse, Error>) -> Void)
 }
 
 final public class TheRickandMortyService: TheRickandMortyServiceProtocol {
@@ -18,7 +17,6 @@ final public class TheRickandMortyService: TheRickandMortyServiceProtocol {
     private enum Enpoints {
         static let baseURL = "https://rickandmortyapi.com/api"
         
-        case episodes
         case characters
         
         var url: URL {
@@ -29,21 +27,13 @@ final public class TheRickandMortyService: TheRickandMortyServiceProtocol {
             switch self {
             case .characters:
                 return "\(Enpoints.baseURL)/character"
-            case .episodes:
-                return "\(Enpoints.baseURL)/episode"
             }
         }
         
     }
     
-    public func getEpisodes(completion: @escaping (Result<EpisodesResponse, Error>) -> Void) {
-        makeGetRequest(url: Enpoints.episodes.url, responseType: EpisodesResponse.self) { result in
-            completion(result)
-        }
-    }
-    
-    public func getCharaters(completion: @escaping (Result<Any, Error>) -> Void) {
-        makeGetRequest(url: Enpoints.characters.url, responseType: Any.self) { result in
+    public func getCharaters(completion: @escaping (Result<CharactersResponse, Error>) -> Void) {
+        makeGetRequest(url: Enpoints.characters.url, responseType: CharactersResponse.self) { result in
             completion(result)
         }
     }

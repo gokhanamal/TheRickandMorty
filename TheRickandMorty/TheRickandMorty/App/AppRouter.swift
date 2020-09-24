@@ -18,11 +18,7 @@ final class AppRouter {
     }
     
     func start() {
-        let tabBarController = UITabBarController()
-        let episodesViewController = EpisodesBuilder.make()
-        tabBarController.viewControllers = [episodesViewController]
-        
-        window?.rootViewController = tabBarController
+        window?.rootViewController = CharactersBuilder.make()
         window?.makeKeyAndVisible()
     }
 }

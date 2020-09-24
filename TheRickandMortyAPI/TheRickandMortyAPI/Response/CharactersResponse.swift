@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct EpisodesResponse: Decodable {
+public struct CharactersResponse: Decodable {
     let info: Info
-    let results: [Episode]
+    let results: [Character]
 }
