@@ -12,3 +12,18 @@ import class UIKit.UINavigationController
 protocol EpisodesBuilderProtocol {
     static func make() -> UINavigationController
 }
+
+protocol EpisodesViewModelProtocol {
+    var view: EpisodesViewDelegate? { get set }
+    func viewDidLoad()
+}
+
+protocol EpisodesViewDelegate {
+    func handleOutput(_ output: EpisodesOutput)
+}
+
+enum EpisodesOutput {
+    case setLoading(Bool)
+    case showError(String)
+    case showEpisodes
+}

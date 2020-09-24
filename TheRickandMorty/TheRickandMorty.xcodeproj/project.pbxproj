@@ -10,6 +10,9 @@
 		771B2CE12516749200936CFD /* Episodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771B2CE02516749200936CFD /* Episodes.storyboard */; };
 		771B2CE3251674AA00936CFD /* EpisodesContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771B2CE2251674AA00936CFD /* EpisodesContracts.swift */; };
 		771B2CE5251674E000936CFD /* EpisodesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771B2CE4251674E000936CFD /* EpisodesBuilder.swift */; };
+		776D94F325168FD9001A1815 /* TheRickandMortyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776D94F225168FD9001A1815 /* TheRickandMortyAPI.framework */; };
+		776D94F425168FD9001A1815 /* TheRickandMortyAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 776D94F225168FD9001A1815 /* TheRickandMortyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77762C41251BFC0500F8A434 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77762C40251BFC0500F8A434 /* EpisodesViewModel.swift */; };
 		77A442902516726B00885D57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4428F2516726B00885D57 /* AppDelegate.swift */; };
 		77A442922516726B00885D57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A442912516726B00885D57 /* SceneDelegate.swift */; };
 		77A442942516726B00885D57 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A442932516726B00885D57 /* EpisodesViewController.swift */; };
@@ -18,10 +21,26 @@
 		77A442A62516730800885D57 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A442A52516730800885D57 /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		776D94F525168FD9001A1815 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				776D94F425168FD9001A1815 /* TheRickandMortyAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		771B2CE02516749200936CFD /* Episodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Episodes.storyboard; sourceTree = "<group>"; };
 		771B2CE2251674AA00936CFD /* EpisodesContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesContracts.swift; sourceTree = "<group>"; };
 		771B2CE4251674E000936CFD /* EpisodesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesBuilder.swift; sourceTree = "<group>"; };
+		776D94F225168FD9001A1815 /* TheRickandMortyAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TheRickandMortyAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77762C40251BFC0500F8A434 /* EpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
 		77A4428C2516726B00885D57 /* TheRickandMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheRickandMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A4428F2516726B00885D57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A442912516726B00885D57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776D94F325168FD9001A1815 /* TheRickandMortyAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +68,7 @@
 			children = (
 				77A442932516726B00885D57 /* EpisodesViewController.swift */,
 				771B2CE02516749200936CFD /* Episodes.storyboard */,
+				77762C40251BFC0500F8A434 /* EpisodesViewModel.swift */,
 				771B2CE2251674AA00936CFD /* EpisodesContracts.swift */,
 				771B2CE4251674E000936CFD /* EpisodesBuilder.swift */,
 			);
@@ -61,11 +82,20 @@
 			path = Characters;
 			sourceTree = "<group>";
 		};
+		776D94F125168FD9001A1815 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				776D94F225168FD9001A1815 /* TheRickandMortyAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77A442832516726B00885D57 = {
 			isa = PBXGroup;
 			children = (
 				77A4428E2516726B00885D57 /* TheRickandMorty */,
 				77A4428D2516726B00885D57 /* Products */,
+				776D94F125168FD9001A1815 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +148,7 @@
 				77A442882516726B00885D57 /* Sources */,
 				77A442892516726B00885D57 /* Frameworks */,
 				77A4428A2516726B00885D57 /* Resources */,
+				776D94F525168FD9001A1815 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +216,7 @@
 				77A442942516726B00885D57 /* EpisodesViewController.swift in Sources */,
 				77A442902516726B00885D57 /* AppDelegate.swift in Sources */,
 				77A442922516726B00885D57 /* SceneDelegate.swift in Sources */,
+				77762C41251BFC0500F8A434 /* EpisodesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +360,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gokhan.TheRickandMorty;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TheRickandMorty;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -346,7 +378,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gokhan.TheRickandMorty;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TheRickandMorty;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
