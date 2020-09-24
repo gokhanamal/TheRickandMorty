@@ -37,6 +37,8 @@
 		776D872F251760E6001D219D /* TheRickandMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRickandMortyService.swift; sourceTree = "<group>"; };
 		776D873325176181001D219D /* CharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResponse.swift; sourceTree = "<group>"; };
 		776D8735251761A7001D219D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		7782E5AE251D288C00C82DF7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7782E5B0251D288C00C82DF7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		77855163251A23410046DDE5 /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
 		77855165251A245C0046DDE5 /* EposideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EposideTests.swift; sourceTree = "<group>"; };
 		77855168251A248D0046DDE5 /* episode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = episode.json; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				7730ABFC25168D8C007600B6 /* TheRickandMortyAPI */,
 				7730AC0C25168E78007600B6 /* TheRickandMortyAPITests */,
+				7782E5AD251D288C00C82DF7 /* Frameworks */,
 				7730ABFB25168D8C007600B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +129,15 @@
 				776D873325176181001D219D /* CharactersResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		7782E5AD251D288C00C82DF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7782E5AE251D288C00C82DF7 /* WidgetKit.framework */,
+				7782E5B0251D288C00C82DF7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		77855162251A232A0046DDE5 /* Helpers */ = {
@@ -200,7 +212,7 @@
 		7730ABF125168D8C007600B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Gokhan Namal";
 				TargetAttributes = {

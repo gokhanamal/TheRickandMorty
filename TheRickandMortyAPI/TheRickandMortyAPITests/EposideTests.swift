@@ -16,7 +16,7 @@ class EposideTests: XCTestCase {
         let url = bundle.url(forResource: "episode", withExtension: "json")!
         let data = try Data(contentsOf: url)
         let decoder = Decoders.plainDateDecoeder
-        let episode = try decoder.decode(Episode.self, from: data)
+        let episode = try decoder.decode(CharactersResponse.self, from: data)
         
         XCTAssertEqual(episode.name, "Pilot")
         XCTAssertEqual(episode.id, 1)

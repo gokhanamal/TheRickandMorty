@@ -9,11 +9,16 @@
 import Foundation
 import class UIKit.UINavigationController
 import class UIKit.UIStoryboard
+import TheRickandMortyAPI
 
 final class CharactersBuilder: CharactersBuilderProtocol {
     static func make() -> UINavigationController {
         let storyboard = UIStoryboard(name: "Characters", bundle: .main)
+        let service = TheRickandMortyService()
+               let viewModel = CharactersViewModel(service: service)
         let viewController = storyboard.instantiateInitialViewController() as! CharactersViewController
+        viewController.viewModel = viewModel
+        
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }

@@ -12,3 +12,19 @@ import class UIKit.UINavigationController
 protocol CharactersBuilderProtocol {
     static func make() -> UINavigationController
 }
+
+protocol CharactersViewModelProtocol {
+    var view: CharactersViewDelegate? { get set }
+    func viewDidLoad()
+}
+
+protocol CharactersViewDelegate {
+    func handleOutput(_ output: CharactersViewOutputs)
+}
+
+enum CharactersViewOutputs {
+    case showLoading(Bool)
+    case showError(String)
+    case showCharacters
+}
+

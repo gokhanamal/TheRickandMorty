@@ -9,6 +9,6 @@
 import Foundation
 
 public struct CharactersResponse: Decodable {
-    let info: Info
-    let results: [Character]
+    public let info: Info
+    public let results: [Character]
 }

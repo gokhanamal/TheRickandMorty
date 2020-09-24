@@ -9,16 +9,30 @@
 import UIKit
 
 class CharactersViewController: UIViewController {
-
+    var viewModel: CharactersViewModelProtocol! {
+        didSet {
+            viewModel.view = self
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         navigationItem.title = "Rick and Morty"
         navigationController?.navigationBar.prefersLargeTitles = true
+        viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 }
 
-extension CharactersViewController {
-    
+extension CharactersViewController: CharactersViewDelegate {
+    func handleOutput(_ output: CharactersViewOutputs) {
+        switch output {
+        case .showLoading(_):
+            break;
+        case .showError(_):
+            break;
+        case .showCharacters:
+            break;
+        }
+    }
 }
