@@ -67,6 +67,9 @@
                             <constraint firstItem="RcZ-YP-pTO" firstAttribute="top" secondItem="xUY-Kc-c3L" secondAttribute="top" id="iJW-md-sub"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="RcZ-YP-pTO" id="s2u-Nb-1d4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAS-7V-5mw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

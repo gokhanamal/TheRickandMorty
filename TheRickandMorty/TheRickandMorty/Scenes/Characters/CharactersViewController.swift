@@ -9,6 +9,8 @@
 import UIKit
 
 class CharactersViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var viewModel: CharactersViewModelProtocol! {
         didSet {
             viewModel.view = self
